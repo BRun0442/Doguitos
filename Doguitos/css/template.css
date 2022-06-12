@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+body{
+  background-color: rgb(246,237,217);
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  text-align: justify;
+
+  background-image: url('../img/logoTransparente.png');
+  background-repeat: no-repeat;
+  background-attachment:local;
+  overflow-x: hidden;
+}
+
+.itemsHeader{
+  text-decoration: none;
+  color: rgb(75, 37, 20);
+  font-weight: 900;
+
+  padding: 2vh;
+}
+
+h1, h2{
+  color: rgb(75, 37, 20);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header{
+  background-color: rgb(184, 91, 48);
+  height: 17vh;
+
+  flex-wrap: wrap;
+}
+
+#logo{
+  height: 10vh;
+  margin-left: 5vw;
+}
+
+#titulo{
+  font-size: 6.5vh;
+  margin: 0 0 0 5vw;
+}
+
+.list{
+  list-style: none;
+  margin-right: 5vw;
+  padding: 0;
+}
+
+#flexText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 1.7rem;
+}
+
+#dogPompom{
+  text-align: center;
+}
+
+#dogPompom img{
+
+  width: 60vw;
+}
+
+#flexText{
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+/* telas maiores que 600px */
+@media all and (min-width: 600px)
+{
+  .list li{
+    margin-left: 2vw;
+  }
+
+  #logo:hover{
+    height: 12vh;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+  }
+  
+  #flexText{
+    margin: 10vh 5vw 0 5vw;
+    font-size: 2.3vh;
+  }
+
+  #gridLeftTab{
+    background-color: rgb(206, 111, 66);
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    height: fit-content;
+  } 
+  
+  .card{
+    margin-top: 10vh;
+    text-align: center;
+  }
+
+  .card img{
+    width: 90%;
+  }
+
+  .cardContainer{
+    padding: 0 0.5vw 0 0.5vw;
+  }
+
+  body{
+    background-size: 50vw 100vh;
+    background-position: 50% 20vh;
+  } 
+}
+
+
+/* celulares com tela menor que 600px */
+@media all and (max-width: 600px)
+{
+  .list li{
+    margin-left: 5vw;
+  }
+
+  .grid{
+    display: block;
+    margin: 0;
+  }
+
+  #flexText{
+    margin: 10vh 10vw 0 10vw;
+    font-size: 2.3vh;
+  }
+
+  body{
+    background-size: 50vw 30vh;
+    background-position: 50% 50vh;
+  }
+
+  #gridLeftTab{
+    display: none;
+  }
+
+  .container{
+    justify-content: center;
+  }
+
+  #dogPompom img{
+    height: 20vh;
+  }
+}
+
+#rodape{
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  gap: 5vw; 
+  align-items: center;
+
+  background-color: #00a3b4;
+  height: min-content;
+  padding-left: 3vw;
+  
+  position: relative;
+}
+
+.listFooter, .footerCard{
+  text-align: center;
+  margin-right: 0;
+}
+
+.listFooter li{
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+#scrollUpButton{
+  width: 75px;
+  height: 75px;
+
+  border-radius: 15px;
+
+  position: fixed;
+  right: 3vw;
+  bottom: 5vh;
+}
+
+#scrollUpButton img:hover{
+  width: 70px;
+  height: 70px;
+}
